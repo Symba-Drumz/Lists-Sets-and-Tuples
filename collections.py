@@ -59,3 +59,51 @@ print(cymbals.count("Zildjian")) # returns the count of Zildjian in the list
 cymbals2 = cymbals.copy()  # creates a copy of the list
 print(cymbals2)  # ['Zildjian', 'Sabian', 'Soultone', 'Meinl', 'Istanbul', 'Paiste']
 
+
+# SETS
+# sets are unordered and unindexed, no duplicates allowed. They are faster than lists.
+# You cannot change the elements of a set since sets dont have indexes but you can add or remove elements.
+# You cannot have mutable elements in a set like lists or dictionaries. You can only have immutable elements like strings, numbers, and tuples.
+fruits = {"apple", "banana", "cherry", "apple"}  # sets are unordered and unindexed, no duplicates allowed
+print(fruits)  # {'banana', 'cherry', 'apple'} apple is only printed once
+
+fruits.add("orange")  # adds orange to the set
+print(fruits)
+
+fruits.remove("banana")  # removes banana from the set
+print(fruits)  # {'cherry', 'apple', 'orange'}banana removed from the set
+
+print("banana" in fruits) # returns True if banana is in the set. in is a membership operator confirming if the element is in the set. Returns False if not in the set
+
+fruits.pop()  # removes a random element from the set
+print(fruits)  # {'apple', 'orange'} random element removed from the set
+#fruits.clear()  # removes all elements from the set
+
+print(dir(fruits))  # shows all the methods available for the set object.
+print(len(fruits))  # returns the number of elements in the set.
+
+vegetables = {"carrot", "broccoli", "spinach"}
+print(vegetables)  # {'carrot', 'broccoli', 'spinach'}
+# Union of two sets
+grocery_list = fruits.union(vegetables) # combines both sets
+print(grocery_list)  # {'carrot', 'broccoli', 'spinach', 'apple', 'orange'}
+    
+
+for fruit in fruits: # iterating through a set  
+    print(fruit)
+
+
+# TUPLES
+# tuples are ordered and unchangeable, duplicates allowed.. They are faster than lists and sets.
+sticks = ("Vic Firth", "ProMark", "Zildjian", "Vater", "Regal Tip")
+print(sticks)  # ('Vic Firth', 'ProMark', 'Zildjian', 'Vater', 'Regal Tip')
+
+print(dir(sticks))  # shows all the methods available for the tuple object.
+print(len(sticks))  # returns the number of elements in the tuple.Returns 5
+print(sticks.index("Vater")) # returns the index of Vater in the tuple. Returns 3
+print(sticks.count("Vater")) # returns the count of Vater in the tuple. Returns 1
+print("Vic Firth" in sticks) # returns True if Vic Firth is in the tuple. in is a membership operator confirming if the element is in the tuple. Returns False if not in the tuple.
+print(sticks[0])  # Vic Firth: this helps us access the first element of the tuple.
+
+for stick in sticks: # iterating through a tuple
+    print(stick)
